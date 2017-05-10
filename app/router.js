@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('stories', function() {
     this.route('new');
   });
+  this.route('storie');
 });
 
 export default Router;

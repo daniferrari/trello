@@ -1,0 +1,24 @@
+<h1>List of all Stories</h1>
+
+{{#link-to 'stories.new' class="btn btn-primary"}}Add new Storie{{/link-to}}
+<br><br>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Due Date</th>
+      <th>Tasks</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |storie|}}
+    <tr>
+      <th>{{#link-to 'storie.view' book.id }}{{storie.title}}{{/link-to}}</th>
+      <td>{{storie.dueDate}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}
