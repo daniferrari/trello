@@ -3,14 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model(){
-    return this.store.findAll('storie');
+    return this.store.findAll('story');
   },
 
   actions: {
-  deleteStories(storie) {
+  deleteStories(story) {
     let confirmation = confirm('Are you sure?');
     if (confirmation) {
-      storie.destroyRecord();
+      story.destroyRecord();
     }
   }
 }

@@ -10,7 +10,7 @@
   <div class="form-group">
     <label class="col-sm-2 control-label">Due Date</label>
     <div class="col-sm-10">
-      {{input type="text" value=model.dueDate class="form-control" placeholder="Please enter the due date of the stories"}}
+      {{input type="date" value=model.dueDate class="form-control" placeholder="Please enter the due date of the stories"}}
     </div>
   </div>
   <div class="form-group">
@@ -26,7 +26,8 @@
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default" {{action 'saveStorie' model}}>Add to stories list</button>
+      <button type="submit" class="btn btn-default" {{action 'saveStory' model}}>Edit storiy </button>
+    {{#link-to 'story'}}<button type="submit" class="btn btn-default" {{action 'saveStory' model}}>Back to stories list </button>{{/link-to}}
     </div>
   </div>
 </div>

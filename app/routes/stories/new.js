@@ -3,12 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model(){
-    return this.store.createRecord('storie');
+    return this.store.createRecord('story');
   },
 
   actions: {
-    saveStorie(storie){
-      storie.save().then(() => this.transitionTo('storie'));
+    saveStory(story) {
+      let dueDate = new Date(story.get('dueDate'));
+      story.set('dueDate', dueDate);
+      story.save().then(() => this.transitionTo('story'));
     }
   }
 });
