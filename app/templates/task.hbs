@@ -15,7 +15,10 @@
     <tr>
       <th>{{#link-to 'tasks.view' story.id }}{{task.name}}{{/link-to}}</th>
       <td>{{task.storyId}}</td>
-      <td><button class="btn btn-danger btn-xs" {{action 'deleteTask' task}}>Delete</button></td>
+      <td>
+        <button class="btn btn-danger btn-xs" {{action 'deleteTask' task}}>Delete</button>
+        {{#link-to 'tasks.edit' task.id }}<button class="btn btn-primary btn-xs">Edit</button>{{/link-to}}
+      </td>
     </tr>
   {{/each}}
   </tbody>
