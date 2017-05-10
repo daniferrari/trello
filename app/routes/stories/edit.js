@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  model(){
-    return this.store.createRecord('storie');
+  model(params){
+    return this.store.findRecord('storie', params.storie_id);
   },
 
   actions: {

@@ -17,7 +17,10 @@
       <th>{{#link-to 'storie.view' book.id }}{{storie.title}}{{/link-to}}</th>
       <td>{{storie.dueDate}}</td>
       <td></td>
-      <td><button class="btn btn-danger btn-xs" {{action 'deleteStories' storie}}>Delete</button></td>
+      <td>
+        <button class="btn btn-danger btn-xs" {{action 'deleteStories' storie}}>Delete</button>
+        {{#link-to 'stories.edit' storie.id }}<button class="btn btn-primary btn-xs">Edit</button>{{/link-to}}
+      </td>
     </tr>
   {{/each}}
   </tbody>
