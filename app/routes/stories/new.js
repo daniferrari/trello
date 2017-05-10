@@ -7,10 +7,11 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    saveStory(story) {
-      let dueDate = new Date(story.get('dueDate'));
-      story.set('dueDate', dueDate);
-      story.save().then(() => this.transitionTo('story'));
-    }
+    saveStory(newStory) {
+      let dueDate = new Date(newStory.get('dueDate'));
+
+      newStory.set('dueDate', dueDate);
+      newStory.save().then(() => this.transitionTo('story'));
+    },
   }
 });

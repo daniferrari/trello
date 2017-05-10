@@ -1,16 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params){
-    return this.store.findRecord('story', params.story_id);
+  model() {
+    return this.store.findAll('story');
   },
 
   actions: {
-    deleteTask(task) {
+    deleteStory(story) {
       let confirmation = confirm('Are you sure?');
 
       if (confirmation) {
-        task.destroyRecord();
+        story.destroyRecord();
       }
     }
   }

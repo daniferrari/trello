@@ -21,6 +21,10 @@
         {{#link-to 'tasks.view' task.id }}<button class="btn btn-info btn-xs">Details</button>{{/link-to}}
       </td>
     </tr>
+  {{else}}
+    <tr>
+      <td colspan="3">Empty Colection</td>
+    </tr>
   {{/each}}
   </tbody>
 </table>

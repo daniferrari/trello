@@ -1,20 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params){
-  return Ember.RSVP.hash({
-    task: this.store.findRecord('task', params.task_id),
-    story: this.store.findAll('story')
+  model(params) {
+    return Ember.RSVP.hash({
+      task: this.store.findRecord('task', params.task_id),
+      stories: this.store.findAll('story')
     })
   },
 
-  actions:
-  {
-    saveTask(newTask){
-      let storyId = this.controller.get('story');
+  actions: {
+    saveTask(editTask) {
+      let storyId = this.controller.get('storyId');
       let story = this.get('store').peekRecord('story', storyId);
-      newTask.set('story', story);
-      newTask.save().then(() => this.transitionTo('task'));
-    }
+
+      editTask.set('story', story);
+      story.get('tasks').pushObject(editTask);
+      editTask.save().then(function () {
+        story.save();
+      }).then(() => this.transitionTo('tasks'));
+    },
   }
 });

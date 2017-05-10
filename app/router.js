@@ -8,13 +8,16 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('stories', function() {
+    this.route('index');
     this.route('new');
     this.route('edit', { path: '/:story_id/edit' });
     this.route('view', { path: '/:story_id/view' });
+    this.route('addtasks', { path: '/:story_id/addtasks' });
   });
   this.route('story');
   this.route('task');
   this.route('tasks', function() {
+    this.route('index');
     this.route('new');
     this.route('edit', { path: '/:task_id/edit' });
     this.route('view', { path: '/:task_id/view' });

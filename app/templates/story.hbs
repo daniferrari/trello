@@ -21,7 +21,12 @@
         <button class="btn btn-danger btn-xs" {{action 'deleteStories' story}}>Delete</button>
         {{#link-to 'stories.edit' story.id }}<button class="btn btn-primary btn-xs">Edit</button>{{/link-to}}
         {{#link-to 'stories.view' story.id }}<button class="btn btn-primary btn-xs">View</button>{{/link-to}}
+        {{#link-to 'stories.addtasks' story.id }}<button class="btn btn-primary btn-xs">Add task</button>{{/link-to}}
       </td>
+    </tr>
+  {{else}}
+    <tr>
+      <td colspan="3">Empty Colection</td>
     </tr>
   {{/each}}
   </tbody>
