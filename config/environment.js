@@ -6,6 +6,20 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+
+    firebase: {
+      apiKey:  "AIzaSyBy3MjcwsvHtYdWmm1V8Q_eoG0ubBKAchw",
+      authDomain: "trello-71eac.firebaseapp.com",
+      databaseURL: "https://trello-71eac.firebaseio.com",
+      storageBucket: "trello-71eac.appspot.com",
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
