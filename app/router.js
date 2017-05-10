@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('stories', function() {
     this.route('new');
     this.route('edit', { path: '/:storie_id/edit' });
+    this.route('view', { path: '/:storie_id/view' });
   });
   this.route('storie');
 });
