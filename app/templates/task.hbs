@@ -13,8 +13,9 @@
   <tbody>
   {{#each model as |task|}}
     <tr>
-      <th>{{#link-to 'stories.view' story.id }}{{task.name}}{{/link-to}}</th>
+      <th>{{#link-to 'tasks.view' story.id }}{{task.name}}{{/link-to}}</th>
       <td>{{task.storyId}}</td>
+      <td><button class="btn btn-danger btn-xs" {{action 'deleteTask' task}}>Delete</button></td>
     </tr>
   {{/each}}
   </tbody>
