@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 
   actions: {
     saveStorie(storie){
-      storie.save().then(() => this.transitionTo('storie/new'));
+      storie.save().then(() => this.transitionTo('stories/new'));
     }
   }
 });
