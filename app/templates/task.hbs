@@ -13,11 +13,12 @@
   <tbody>
   {{#each model as |task|}}
     <tr>
-      <th>{{#link-to 'tasks.view' story.id }}{{task.name}}{{/link-to}}</th>
+      <th>{{#link-to 'tasks.view' task.id }}{{task.name}}{{/link-to}}</th>
       <td>{{task.storyId}}</td>
       <td>
         <button class="btn btn-danger btn-xs" {{action 'deleteTask' task}}>Delete</button>
         {{#link-to 'tasks.edit' task.id }}<button class="btn btn-primary btn-xs">Edit</button>{{/link-to}}
+        {{#link-to 'tasks.view' task.id }}<button class="btn btn-info btn-xs">Details</button>{{/link-to}}
       </td>
     </tr>
   {{/each}}

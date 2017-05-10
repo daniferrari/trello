@@ -1,0 +1,16 @@
+<h1>Details about task: {{model.name}}</h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Task {{model.name}}</h3>
+  </div>
+  <div class="panel-body">
+    <p><b>Name: </b> {{model.name}} </p>
+    <p><b>Story ID: </b>{{model.storyId}} </p>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+  {{#link-to 'task'}}<button type="submit" class="btn btn-default">Back to task list </button>{{/link-to}}
+  </div>
+</div>

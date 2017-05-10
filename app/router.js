@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('tasks', function() {
     this.route('new');
     this.route('edit', { path: '/:task_id/edit' });
+    this.route('view', { path: '/:task_id/view' });
   });
 });
 
