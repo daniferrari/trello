@@ -13,6 +13,10 @@ Router.map(function() {
     this.route('view', { path: '/:story_id/view' });
   });
   this.route('story');
+  this.route('task');
+  this.route('tasks', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
