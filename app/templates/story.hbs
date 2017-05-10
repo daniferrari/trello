@@ -7,7 +7,6 @@
     <tr>
       <th>Title</th>
       <th>Due Date</th>
-      <th>Tasks</th>
       <th>Options</th>
     </tr>
   </thead>
@@ -16,11 +15,10 @@
     <tr>
       <th>{{#link-to 'stories.view' story.id }}{{story.title}}{{/link-to}}</th>
       <td>{{story.dueDate}}</td>
-      <td></td>
       <td>
         <button class="btn btn-danger btn-xs" {{action 'deleteStories' story}}>Delete</button>
         {{#link-to 'stories.edit' story.id }}<button class="btn btn-primary btn-xs">Edit</button>{{/link-to}}
-        {{#link-to 'stories.view' story.id }}<button class="btn btn-primary btn-xs">View</button>{{/link-to}}
+        {{#link-to 'stories.view' story.id class='btn btn-success btn-xs'}}View{{/link-to}}
         {{#link-to 'stories.addtasks' story.id }}<button class="btn btn-primary btn-xs">Add task</button>{{/link-to}}
       </td>
     </tr>

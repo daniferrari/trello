@@ -16,7 +16,7 @@ export default Ember.Route.extend({
       story.get('tasks').pushObject(newTask);
       newTask.save().then(function () {
         story.save();
-      }).then(() => this.transitionTo('stories'));
+      }).then(() => this.transitionTo('story'));
     },
 
     willTransition() {

@@ -10,7 +10,7 @@ export default Ember.Route.extend({
       let dueDate = new Date(editStory.get('dueDate'));
 
       editStory.set('dueDate', dueDate);
-      editStory.save().then(() => this.transitionTo('stories'));
+      editStory.save().then(() => this.transitionTo('story'));
     },
 
     willTransition() {
